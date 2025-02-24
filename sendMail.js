@@ -1,10 +1,11 @@
 function sendMail(event) {
     event.preventDefault(); // ป้องกันฟอร์มรีโหลดหน้าเว็บ
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
+    const name = document.querySelector(".form input[placeholder='Your Name']").value;
+    const email = document.querySelector(".form input[placeholder='Your Email']").value;
+    const subject = document.querySelector(".form input[placeholder='Subject']").value;
+    const message = document.querySelector(".form textarea[placeholder='Message']").value;
+
 
     if (!name || !email || !subject || !message) {
         alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
@@ -17,5 +18,8 @@ function sendMail(event) {
 
     window.open(mailtoLink, "_blank");
 
-    document.getElementById("contact-form").reset();
+    document.querySelector(".form input[placeholder='Your Name']").value = "";
+    document.querySelector(".form input[placeholder='Your Email']").value = "";
+    document.querySelector(".form input[placeholder='Subject']").value = "";
+    document.querySelector(".form textarea[placeholder='Message']").value = "";
 }
