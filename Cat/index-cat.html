@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MyFolio</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Portfolio HTML Template" name="keywords">
+        <meta content="Portfolio HTML Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Solway:400,700&display=swap" rel="stylesheet"> 
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Header Start -->
+        <!-- <div class="top-header" id="top-header">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="img/IMG_4924.jpg" alt="Akkaraphol-pic" />
+                    </div>
+
+                    <div class="col-md-12">
+                        <h1>Akkaraphol Khanthamala</h1>
+                    </div>
+
+                    <div class="col-md-12">
+                        <p>Developer - Programmer</p>
+                        <h2></h2>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Header End -->
+
+        <!-- Nav Start -->
+        <div class="header">
+            <div class="container">
+
+                <div class="logo pull-left">
+                    <h1><a href="index-cat.html">MyFolio</a></h1>
+                </div>
+
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li><a href="index-cat.html">Home</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="nav social-nav pull-right d-none d-lg-inline">
+                    <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav End -->
+
+        <!-- About Me Start-->
+        <div class="about" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-lg-4">
+                        <img class="img-fluid" src="img/pj-cat1.jpg" />
+                    </div>
+
+                    <div class="col-md-6 col-lg-8">
+                        <header class="section-header">
+                            <h2>Automatic cat feeder</h2>
+                        </header>
+                        <!-- <h3><strong>Name:</strong> Akkaraphol Khanthamala</h3>
+                        <h4><strong>Profession:</strong> Developer & Programmer</h4> -->
+                        <p>
+                            Developed an automatic cat feeder using Arduino, 
+                            which includes features such as taking a photo when the cat eats and sending it to the phone, as well as scheduling the feeding times for automatic on/off operation.                       
+                        <p>
+                        <p>
+                            Equipment used: arduino uno r3 board, servo motor, lcd display for arduino, clock signal module, esp 32 cam board, sensor hc-sr04, step down module
+                        </p>
+                        <p>
+                            Working section: It is divided into 2 parts. The first part is the food supply section. It uses Arduino Uno R3 to control the servo, LCD, and clock signal. 
+                            The second part, which is the part for connecting to WiFi, uses ESP32-CAM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Me End-->
+        
+    
+
+        <!-- Contact Start -->
+        <div class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Contact Me</h3>
+                    <!-- <p>
+                        Morbi lacinia malesuada risus vel pellentesque. Cras malesuada, felis nec dignissim lobortis, nisl nulla venenatis arcu, et commodo lacus nulla sit amet libero.
+                    </p> -->
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <p><i class="fa fa-user"></i>Akkaraphol Khanthamala/p>
+                            <p><i class="fa fa-tag"></i>Developer & Programmer</p>
+                            <p><i class="fa fa-map-marker"></i>223 Wong Sawang 11, Bang Sue, Bangkok</p>
+                            <p><i class="fa fa-envelope"></i><a href="mailto:info@example.com">proplub@gmail.com</a></p>
+                            <p><i class="fa fa-phone"></i><a href="tel:+1234567890">0853492627</a></p>
+                            <div class="social">
+                                <a href="https://github.com/Plubakkara"><i class="fa fa-github" aria-hidden="true"></i>
+                                <a href="https://www.linkedin.com/in/plub-undefined-30776b2b0/"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/xxivxmmii/"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form">
+                            <form action="" method="">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" placeholder="Your Name" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="email" class="form-control" placeholder="Your Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Subject" />
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                </div>
+                                <div><button type="submit">Send Message</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+                    <p>Powered by <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer end -->
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/stickyjs/sticky.js"></script>
+        <script src="lib/superfish/hoverIntent.js"></script>
+        <script src="lib/superfish/superfish.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
