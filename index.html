@@ -77,9 +77,9 @@
                     </ul>
                 </nav>
 
-                <nav class="nav social-nav pull-right d-none d-lg-inline">
+                <!-- <nav class="nav social-nav pull-right d-none d-lg-inline">
                     <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a>
-                </nav>
+                </nav> -->
             </div>
         </div>
         <!-- Nav End -->
@@ -106,7 +106,7 @@
                         <p>
                             I am eager to learn, develop new skills, and contribute effectively to the team while gaining valuable experience for my professional and career growth.
                         </p>
-                        <a href="#">Hire Me</a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfnZvjMvbTTQGjNcbDJXwBZdQdFcLdNgnxZZGKBmLXTbKTMPdRGcwRPCxQjMwZKKzwLTsq">Hire Me</a>
                     </div>
                 </div>
             </div>
@@ -415,26 +415,23 @@
         </div> -->
         <!-- Testimonials End -->
 
-        <!-- Contact Start -->
+     <!-- Contact Start -->
         <div class="contact" id="contact">
             <div class="container">
                 <div class="section-header">
                     <h3>Contact Me</h3>
-                    <!-- <p>
-                        Morbi lacinia malesuada risus vel pellentesque. Cras malesuada, felis nec dignissim lobortis, nisl nulla venenatis arcu, et commodo lacus nulla sit amet libero.
-                    </p> -->
                 </div>
 
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="contact-info">
-                            <p><i class="fa fa-user"></i>Akkaraphol Khanthamala/p>
-                            <p><i class="fa fa-tag"></i>Developer & Programmer</p>
-                            <p><i class="fa fa-map-marker"></i>223 Wong Sawang 11, Bang Sue, Bangkok</p>
-                            <p><i class="fa fa-envelope"></i><a href="mailto:info@example.com">proplub@gmail.com</a></p>
-                            <p><i class="fa fa-phone"></i><a href="tel:+1234567890">0853492627</a></p>
+                            <p><i class="fa fa-user"></i> Akkaraphol Khanthamala</p>
+                            <p><i class="fa fa-tag"></i> Developer & Programmer</p>
+                            <p><i class="fa fa-map-marker"></i> 223 Wong Sawang 11, Bang Sue, Bangkok</p>
+                            <p><i class="fa fa-envelope"></i> <a href="mailto:proplub@gmail.com">proplub@gmail.com</a></p>
+                            <p><i class="fa fa-phone"></i> <a href="tel:+66853492627">085-349-2627</a></p>
                             <div class="social">
-                                <a href="https://github.com/Plubakkara"><i class="fa fa-github" aria-hidden="true"></i>
+                                <a href="https://github.com/Plubakkara"><i class="fa fa-github" aria-hidden="true"></i></a>
                                 <a href="https://www.linkedin.com/in/plub-undefined-30776b2b0/"><i class="fa fa-linkedin"></i></a>
                                 <a href="https://www.instagram.com/xxivxmmii/"><i class="fa fa-instagram"></i></a>
                             </div>
@@ -442,20 +439,20 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form">
-                            <form action="" method="">
+                            <form id="contact-form" onsubmit="sendMail(event)">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" placeholder="Your Name" />
+                                        <input type="text" id="name" class="form-control" placeholder="Your Name" required />
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="email" class="form-control" placeholder="Your Email" />
+                                        <input type="email" id="email" class="form-control" placeholder="Your Email" required />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject" />
+                                    <input type="text" id="subject" class="form-control" placeholder="Subject" required />
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                    <textarea id="message" class="form-control" rows="5" placeholder="Message" required></textarea>
                                 </div>
                                 <div><button type="submit">Send Message</button></div>
                             </form>
@@ -464,7 +461,11 @@
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+    <!-- Contact End -->
+
+    <!-- เชื่อมไฟล์ sendMail.js -->
+    <script src="sendMail.js"></script>
+
 
         <!-- Footer Start -->
         <div class="footer">
