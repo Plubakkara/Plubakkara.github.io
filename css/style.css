@@ -1581,3 +1581,79 @@ body.mobile-nav-active #mobile-nav-toggle {
 .footer .copyright p:last-child {
     margin: 0;
 }
+/* ============================= */
+/* ------- Project Awards CSS ------- */
+/* ============================= */
+.project-awards {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(175, 148, 131, 0.05);
+    border-radius: 10px;
+}
+
+.award-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #AF9483;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.award-title i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.award-photo-item {
+    margin-bottom: 20px;
+}
+
+.award-photo-wrap figure {
+    background: #000;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    margin: 0;
+    height: 300px;
+}
+
+.award-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+.award-photo-wrap:hover img {
+    opacity: 0.4;
+    transform: scale(1.05);
+}
+
+.award-photo-wrap .link-preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    color: #AF9483;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.award-photo-wrap:hover .link-preview {
+    opacity: 1;
+}
+
+.award-photo-wrap .link-preview:hover {
+    background: #AF9483;
+    color: #ffffff;
+}
