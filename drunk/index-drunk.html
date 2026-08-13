@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>เกมเศรษฐีวงเหล้า</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600;700&family=Prompt:wght@400;600;700;800&family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SETUP SCREEN ================= -->
+    <section id="setup" class="screen">
+        <div class="setup-card">
+            <div class="setup-header">
+                <span class="beer-icon">🍻</span>
+                <h1>เกมเศรษฐีวงเหล้า</h1>
+                <p>ใส่นามสมาชิกในวงเหล้า แล้วทอยลูกเต๋าประลองกัน!</p>
+            </div>
+
+            <div class="setup-body">
+                <label class="section-label">รายชื่อผู้เล่น (2 - 8 คน)</label>
+                <div id="players-input"></div>
+
+                <button id="add-player" class="btn btn-outline" type="button">
+                    ➕ เพิ่มผู้เล่น
+                </button>
+            </div>
+
+            <div class="setup-footer">
+                <button id="start-game" class="btn btn-primary btn-large" type="button">
+                    🔥 เริ่มเข้าวงเหล้า!
+                </button>
+                <small>⚠️ คำเตือน: ดื่มแล้วห้ามขับ โปรดดื่มอย่างมีสติ!</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MAIN GAME SCREEN ================= -->
+    <section id="game" class="screen hidden">
+
+
+
+        <main class="game-main">
+            <!-- BOARD CONTAINER -->
+            <div class="board-wrapper">
+                <div id="board" class="board-grid">
+                    <!-- 36 Perimeter cells rendered by JS -->
+
+                    <!-- BOARD CENTER AREA (Matches Uploaded Image Layout) -->
+                    <div id="center-board" class="board-center">
+                        <div class="center-content">
+                            <!-- Main Title -->
+                            <h1 class="center-title">เกมเศรษฐีวงเหล้า</h1>
+
+                            <!-- Iron Rules Section -->
+                            <div class="rules-section">
+                                <h3 class="rules-title">** กฎเหล็ก **</h3>
+                                <ol class="rules-list">
+                                    <li><span>1</span> ไม่เมาห้ามเลิก</li>
+                                    <li><span>2</span> เลิกก่อนจ่ายค่าเหล้า</li>
+                                    <li><span>3</span> ดื่มแล้วห้ามขับ</li>
+                                    <li><span>4</span> อ้วก ปรับแพ้</li>
+                                    <li><span>5</span> เหล้าหกโดนมือถือ เพียว 3 ช็อต</li>
+                                </ol>
+                            </div>
+
+                            <!-- Center Action Buttons Row 1 -->
+                            <div class="center-row row-actions">
+                                <button id="btn-feedback" class="btn-red-pill" type="button">แนะนำ/ ติชม</button>
+                                <button id="btn-support" class="btn-red-pill" type="button">สนับสนุนผู้พัฒนา</button>
+                                <button id="btn-menu" class="btn-red-pill" type="button">เมนู</button>
+                            </div>
+
+                            <!-- Center Interactive Row 2 -->
+                            <div class="center-row row-interactive">
+                                <button id="btn-luck-trigger" class="square-badge badge-red badge-tilted" type="button">
+                                    <span class="badge-text">เสี่ยงดวง</span>
+                                </button>
+                                <button id="btn-mini-trigger" class="square-badge badge-red badge-tilted" type="button">
+                                    <span class="badge-text">MINI<br>GAME</span>
+                                </button>
+                                <div id="player-banner" class="yellow-name-box">
+                                    <span id="banner-player-name">ผู้เล่น 1</span>
+                                </div>
+                            </div>
+
+                            <!-- Center Action Row 3 (Battle & Dice) -->
+                            <div class="center-row row-dice">
+                                <button id="btn-battle-trigger" class="btn-red-rect" type="button">BATTLE</button>
+                                
+                                <div class="dice-display-box">
+                                    <div id="dice" class="dice-icon">⚄</div>
+                                </div>
+
+                                <button id="roll" class="btn-red-roll" type="button">
+                                    ทอยลูกเต๋า
+                                </button>
+                            </div>
+
+                            <!-- Status message -->
+                            <div id="status" class="status-msg">พร้อมแล้ว! กดทอยลูกเต๋าเพื่อเริ่มเดิน</div>
+
+                            <!-- Watermark footer -->
+                            <div class="board-watermark">DoodDuum</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDEBAR PANEL -->
+            <aside class="sidebar-panel">
+                <div class="panel-card">
+                    <h3>👥 รายชื่อผู้เล่น</h3>
+                    <div id="player-list" class="player-list"></div>
+                </div>
+
+                <div class="panel-card log-card">
+                    <h3>📜 บันทึกประวัติ</h3>
+                    <div id="logs" class="logs-container"></div>
+                </div>
+            </aside>
+        </main>
+    </section>
+
+    <!-- ================= DYNAMIC MODALS ================= -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-box">
+            <div id="modal-header" class="modal-title">
+                <span id="modal-title-text">หัวข้อ</span>
+            </div>
+            <div id="modal-content" class="modal-content">
+                <!-- Dynamic Content -->
+            </div>
+            <div id="modal-buttons" class="modal-buttons">
+                <!-- Dynamic Buttons -->
+            </div>
+        </div>
+    </div>
+
+    <!-- AUDIO SYNTHESIZER / SOUND SYSTEM -->
+    <script src="script.js"></script>
+</body>
+
+</html>
